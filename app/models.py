@@ -1,6 +1,6 @@
 # models.py
 
-from config import app, db
+from app.db_init import db
 from marshmallow import Schema, fields
 
 
@@ -49,7 +49,3 @@ class Genre(db.Model):
 class GenreSchema(Schema):
     id = fields.Int()
     name = fields.Str()
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
